@@ -8,3 +8,19 @@
     </div>
   </div>
 </header>
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center my-5">Eventos</h2>
+    <div class="card-columns">
+      <% @events.each do |event| %>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= event.title %></h5>
+            <p class="card-text"><%= event.description %></p>
+            <p class="card-text"><small class="text-muted"><%= I18n.l(event.time, format: :short) %><br><%= event.location %></small></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
