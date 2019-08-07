@@ -9,6 +9,9 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # Only load spanish localizations
+  config.i18n.available_locales = :es
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
