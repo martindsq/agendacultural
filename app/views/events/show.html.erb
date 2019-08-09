@@ -1,0 +1,6 @@
+<h2><%= @event.title %></h2>
+<ul class="list-unstyled">
+  <li><small><span class="text-uppercase"><%= t :where %></span>: <%= @event.location %></small></li>
+  <li><small><span class="text-uppercase"><%= t :when %></span>: <%= @event.time.to_s(:time) %></small></li>
+</ul>
+<p class="lead"><%= @event.description %></p>

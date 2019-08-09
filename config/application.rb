@@ -11,6 +11,12 @@ module Agendacultural
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
+    # Whitelist locales available for the application
+    I18n.available_locales = [:en, :es]
+
+    # Set default locale to spanish
+    I18n.default_locale = :es
+
     # Only use uruguayan timezone
     config.time_zone = 'Montevideo'
 
