@@ -2,3 +2,4 @@ es:
   see_detail: Ver detalle
   where: Donde
   when: Cuando
+  footer: "Creado con \u2764 por %{author}."

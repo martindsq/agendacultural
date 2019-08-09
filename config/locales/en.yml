@@ -2,3 +2,4 @@ en:
   see_detail: See detail
   where: Where
   when: When
+  footer: "Created with \u2764 by %{author}."
