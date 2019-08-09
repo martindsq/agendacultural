@@ -3,3 +3,15 @@ es:
   where: Donde
   when: Cuando
   footer: "Creado con \u2764 por %{author}."
+  activerecord:
+    models:
+      event:
+        one: Evento
+        other: Eventos
+  helpers:
+    label:
+      event:
+        title: Titulo
+        location: Donde
+        time: Cuando
+        description: Descripcion
