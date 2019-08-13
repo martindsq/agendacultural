@@ -16,3 +16,5 @@ es:
         time: Cuando
         description: Descripcion
         content: Contenido
+        created_at: Creado
+        updated_at: Actualizado

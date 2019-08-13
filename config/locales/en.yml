@@ -16,3 +16,5 @@ en:
               time: When
               description: Description 
               content: Content
+              created_at: Created
+              updated_at: Updated

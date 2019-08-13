@@ -11,11 +11,11 @@ class EventDashboard < Administrate::BaseDashboard
     id: Field::Number,
     title: Field::String,
     location: Field::String,
-    time: Field::DateTime,
+    time: Field::DateTime.with_options(format: :long),
     description: Field::Text,
     content: Field::SimpleMarkdown,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    created_at: Field::DateTime.with_options(format: :long),
+    updated_at: Field::DateTime.with_options(format: :long),
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -54,10 +54,8 @@ class EventDashboard < Administrate::BaseDashboard
     :content
   ].freeze
 
-  # Overwrite this method to customize how events are displayed
-  # across all pages of the admin dashboard.
-  #
-  # def display_resource(event)
-  #   "Event ##{event.id}"
-  # end
+  def display_resource(event)
+    "#{I18n.t('activerecord.models.event.one')} ##{event.id}"
+  end
+
 end
