@@ -6,12 +6,13 @@ en:
   activerecord:
     models:
       event:
-        one: Evento
-        other: Eventos
+        one: Event
+        other: Events
         helpers:
           label:
             event:
-              title: Titulo
-              location: Donde
-              time: Cuando
-              description: Descripcion
+              title: Title
+              location: Where
+              time: When
+              description: Description 
+              content: Content

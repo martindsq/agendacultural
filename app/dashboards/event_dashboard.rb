@@ -13,6 +13,7 @@ class EventDashboard < Administrate::BaseDashboard
     location: Field::String,
     time: Field::DateTime,
     description: Field::Text,
+    content: Field::SimpleMarkdown,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -37,6 +38,7 @@ class EventDashboard < Administrate::BaseDashboard
     :location,
     :time,
     :description,
+    :content,
     :created_at,
     :updated_at,
   ].freeze
@@ -49,6 +51,7 @@ class EventDashboard < Administrate::BaseDashboard
     :location,
     :time,
     :description,
+    :content
   ].freeze
 
   # Overwrite this method to customize how events are displayed

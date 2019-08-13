@@ -55,6 +55,10 @@ GEM
       momentjs-rails (~> 2.8)
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
+    administrate-field-simple_markdown (0.1.2)
+      administrate (< 1.0.0)
+      rails (>= 4.2, < 6)
+      redcarpet (~> 3.3)
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
@@ -179,6 +183,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    redcarpet (3.5.0)
     regexp_parser (1.5.1)
     ruby_dep (1.5.0)
     rubyzip (1.2.3)
@@ -244,6 +249,7 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
+  administrate-field-simple_markdown
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.3.1)
   byebug

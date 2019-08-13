@@ -3,4 +3,8 @@
   <li><small><span class="text-uppercase"><%= t :where %></span>: <%= @event.location %></small></li>
   <li><small><span class="text-uppercase"><%= t :when %></span>: <%= @event.time.to_s(:time) %></small></li>
 </ul>
-<p class="lead"><%= @event.description %></p>
+<% if @event.content.present? %>
+  <div class="lead">
+    <%= Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@event.content).html_safe %>
+  </div>
+<% end %>

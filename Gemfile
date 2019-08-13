@@ -9,6 +9,7 @@ gem 'rails', '~> 5.2.3'
 gem 'pg'
 # Use administrate to create an admin dashboard
 gem 'administrate'
+gem 'administrate-field-simple_markdown'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
