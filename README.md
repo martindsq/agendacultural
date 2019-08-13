@@ -16,7 +16,7 @@ If you just want to run a website with a list of events, you will want to clone 
 The first logical step is to run the application in a local server. Start by cloning the repository:
 
 ```
-git clone https://github.com/martindsq/penca.git
+git clone https://github.com/martindsq/agendacultural.git
 ```
 
 This is a Ruby on Rails application and I assume that you are already familiarized with it. If not, please take time to learn it, there are many resources in the Internet (personally, I started with [Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html#creating-a-new-rails-project)).
