@@ -8,13 +8,21 @@ es:
       event:
         one: Evento
         other: Eventos
+      place:
+        one: Lugar
+        other: Lugares
   helpers:
     label:
       event:
         title: Titulo
-        location: Donde
+        place: Lugar
         time: Cuando
         description: Descripcion
         content: Contenido
+        created_at: Creado
+        updated_at: Actualizado
+      place:
+        title: Nombre
+        address: Direccion
         created_at: Creado
         updated_at: Actualizado

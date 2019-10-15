@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class EventDashboard < Administrate::BaseDashboard
+class PlaceDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -10,12 +10,9 @@ class EventDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
-    place: Field::BelongsTo,
-    time: Field::DateTime.with_options(format: :long),
-    description: Field::Text,
-    content: Field::SimpleMarkdown,
-    created_at: Field::DateTime.with_options(format: :long),
-    updated_at: Field::DateTime.with_options(format: :long),
+    address: Field::String,
+    created_at: Field::DateTime,
+    updated_at: Field::DateTime,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -26,8 +23,7 @@ class EventDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :title,
-    :place,
-    :time,
+    :address
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -35,10 +31,7 @@ class EventDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :title,
-    :place,
-    :time,
-    :description,
-    :content,
+    :address,
     :created_at,
     :updated_at,
   ].freeze
@@ -48,14 +41,11 @@ class EventDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :title,
-    :place,
-    :time,
-    :description,
-    :content
+    :address,
   ].freeze
 
-  def display_resource(event)
-    "#{I18n.t('activerecord.models.event.one')} ##{event.id}"
+  def display_resource(place)
+    place.title
   end
 
 end

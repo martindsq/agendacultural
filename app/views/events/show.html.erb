@@ -1,7 +1,9 @@
 <h2><%= @event.title %></h2>
 <ul class="list-unstyled">
-  <li><small><span class="text-uppercase"><%= t :where %></span>: <%= @event.location %></small></li>
-  <li><small><span class="text-uppercase"><%= t :when %></span>: <%= @event.time.to_s(:time) %></small></li>
+  <% if !@event.place.nil? %>
+    <li><small><span class="text-uppercase"><%= t :where %></span>: <%= @event.place %> (<%= @event.place.address %>)</small></li>
+  <% end %>
+  <li><small><span class="text-uppercase"><%= t :when %></span>: <%= I18n.localize @event.time, format: :short %></small></li>
 </ul>
 <% if @event.content.present? %>
   <div class="lead">
