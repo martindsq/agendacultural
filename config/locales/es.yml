@@ -2,7 +2,9 @@ es:
   see_detail: Ver detalle
   where: Donde
   when: Cuando
+  filter: Filtrar
   footer: "Creado con \u2764 por %{author}."
+  no_events_to_show: "No hay eventos para mostrar" 
   activerecord:
     models:
       event:

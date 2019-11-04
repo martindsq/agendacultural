@@ -1,4 +1,20 @@
 <h2 class="text-center sr-only">Eventos</h2>
+<%= form_with(url: "/events", method: "get", local: true, skip_enforcing_utf8: true, class: "form-inline") do %>
+  <%= label_tag("from", "Desde", class: "sr-only mr-2 mb-3") %>
+  <input class="form-control mr-2 mb-3" 
+         id="from" 
+         name="from" 
+         data-provide="datepicker-inline" 
+         data-date-format="yyyy-mm-dd" 
+         data-date-language="<%= I18n.locale %>"
+         value="<%= @from.iso8601 %>">
+  <%= submit_tag(t(:filter), name: nil, class:"btn btn-primary mb-3") %>
+<% end %>
+<% if @events.empty? %>
+  <div class="alert alert-light" role="alert">
+    <%= t(:no_events_to_show) %>
+</div>
+<% end %>
 <div class="card-columns">
   <% @events.each do |event| %>
     <div class="card">
