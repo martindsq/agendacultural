@@ -6,7 +6,7 @@
         <div class="card border-0">
           <div class="row">
             <div class="col-auto text-center">
-              <p class="my-0 text-uppercase"><%= I18n.l(event.time, format: '%b').capitalize %></p>
+	      <p class="my-0 text-uppercase"><%= I18n.l(event.time, format: '%b') %></p>
               <p class="my-0 display-4"><%= event.time.day %></p>
             </div>
             <div class="col-md-8">
@@ -14,9 +14,9 @@
                 <%= link_to event.title, event_path(event), class: 'text-dark' %>
               </h5>
               <p class="card-text">
-                <small class="text-muted">
+                <small class="text-muted text-uppercase">
                   <%if !event.place.nil? %><%= event.place %><br><% end %>
-                  <%= event.time.to_s(:time) %>
+                  <%= I18n.l(event.time, format: '%A')%> <%= event.time.to_s(:time) %>
                 </small></p>
             </div>
           </div>
