@@ -27,3 +27,8 @@
     </div>
   <% end %>
 </div>
+<% if @events.total_pages > 1 %>
+  <nav aria-label="Event pagination" class="mt-5">
+    <%= paginate @events %>
+  </nav>
+<% end %>

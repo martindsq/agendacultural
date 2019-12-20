@@ -10,6 +10,8 @@ gem 'pg'
 # Use administrate to create an admin dashboard
 gem 'administrate'
 gem 'administrate-field-simple_markdown'
+# Use kaminari for pagination
+gem 'kaminari'
 # Use Puma as the app server
 gem 'puma', '>= 3.12.2'
 # Use SCSS for stylesheets
