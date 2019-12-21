@@ -16,3 +16,10 @@
     column-count: 3;
   }
 }
+
+@media (min-width: 768px) {
+  .w-md-33 {
+    width: 33% !important;
+  }
+}
+

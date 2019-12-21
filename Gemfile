@@ -10,6 +10,8 @@ gem 'pg'
 # Use administrate to create an admin dashboard
 gem 'administrate'
 gem 'administrate-field-simple_markdown'
+gem 'administrate-field-active_storage', '~> 0.1.8'
+gem "mini_magick"
 # Use kaminari for pagination
 gem 'kaminari'
 # Use Puma as the app server

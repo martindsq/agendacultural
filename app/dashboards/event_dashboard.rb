@@ -12,6 +12,7 @@ class EventDashboard < Administrate::BaseDashboard
     title: Field::String,
     place: Field::BelongsTo,
     time: Field::DateTime.with_options(format: :long),
+    image: Field::ActiveStorage,
     description: Field::Text,
     content: Field::SimpleMarkdown,
     created_at: Field::DateTime.with_options(format: :long),
@@ -37,6 +38,7 @@ class EventDashboard < Administrate::BaseDashboard
     :title,
     :place,
     :time,
+    :image,
     :description,
     :content,
     :created_at,
@@ -50,6 +52,7 @@ class EventDashboard < Administrate::BaseDashboard
     :title,
     :place,
     :time,
+    :image,
     :description,
     :content
   ].freeze

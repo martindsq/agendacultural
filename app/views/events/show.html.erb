@@ -6,8 +6,12 @@
   <% end %>
   <li><small><span class="text-uppercase"><%= t :when %></span>: <%= I18n.localize @event.time, format: :short %></small></li>
 </ul>
+<% if @event.image.attached? %>
+  <a href="<%= url_for(@event.image) %>"><img src="<%= url_for(@event.image) %>" class="img-thumbnail rounded mr-3 mb-3 float-md-left w-md-33"></a>
+<% end %>
 <% if @event.content.present? %>
   <div class="lead">
     <%= Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@event.content).html_safe %>
   </div>
 <% end %>
+
