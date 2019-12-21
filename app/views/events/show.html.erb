@@ -1,3 +1,4 @@
+<%= content_for :page_title, t(".title", name: @event.title) %>
 <h2><%= @event.title %></h2>
 <ul class="list-unstyled">
   <% if !@event.place.nil? %>

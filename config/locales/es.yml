@@ -1,4 +1,8 @@
 es:
+  site_name: Agenda Cultural
+  events:
+    show:
+      title: "%{name}"
   see_detail: Ver detalle
   where: Donde
   when: Cuando
